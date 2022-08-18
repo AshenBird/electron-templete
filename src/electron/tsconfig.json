@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"forceConsistentCasingInFileNames":true,
+		"module": "commonjs",
+		"target": "ESNEXT",
+		"outDir": "../../dist/client/main-process/",
+		"lib": [
+			"ESNEXT",
+			"DOM"
+		],
+		"sourceMap": true,
+		"rootDir": "./",
+		"strict": true,
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}

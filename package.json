@@ -1,0 +1,54 @@
+{
+  "name": "electron-template",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/electron/index.js",
+  "author": {
+    "name": "mcswift"
+  },
+  "description": "electron-template",
+  "scripts": {
+    "start": "electron-forge start",
+    "dev:electron": "ts-node scripts/dev.ts --electron",
+    "dev": "vite",
+    "build:view": "vite-ssg build",
+    "build:electron": "ts-node scripts/build.ts ",
+    "build": "npm run build:view && npm run build:electron",
+    "check": "vue-tsc --noEmit",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "fuses": "ts-node scripts/build.ts ",
+    "publish": "npm run fuses && npm run build && npm run make"
+  },
+  "dependencies": {
+    "@prisma/client": "3.15.0",
+    "@vicons/ionicons5": "^0.12.0",
+    "@vue/reactivity": "^3.2.37",
+    "@vueuse/head": "^0.7.9",
+    "chokidar": "^3.5.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "fs-extra": "^10.1.0",
+    "ts-node": "^10.8.1",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.65",
+    "@electron-forge/maker-deb": "^6.0.0-beta.65",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.65",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.65",
+    "@electron-forge/maker-zip": "^6.0.0-beta.65",
+    "@electron/fuses": "^1.5.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.7.6",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue-jsx": "^2.0.0",
+    "dotenv": "^16.0.1",
+    "electron": "^20.0.1",
+    "typescript": "^4.3.5",
+    "vite": "^3.0.8",
+    "vite-ssg": "^0.20.2"
+  },
+  "config": {
+    "forge": "./forge.config.js"
+  }
+}
